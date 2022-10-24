@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block title %} Simple Gates
+{% endblock title %}
+{% block bodycontent %}
+<h3 class="page-title">
+    <dl>
+        <dt><a href="/circuits">In-built Circuit</a></dt>
+        <dd> - Simple Gates</dd>
+    </dl>
+</h3>
+<div class="table-responsive">
+    <table class="table table-bordered">
+        <tbody>
+            {% for gate in gate_data %}
+            {% if 'Simple_gates' == gate.loc %}
+            <tr>
+                <td class="gate_name align-middle"><a href="/circuits/gates/{{gate.name_w}}" class="link-dark">{{gate.name}}</a></td>
+                <td><a href="/circuits/gates/{{gate.name_w}}"><img src="..\..\{{gate.url}}" alt="{{gate.name}}"></a></td>
+            </tr>
+            {% endif %}
+            {% endfor %}
+        </tbody>
+      </table>    
+</div>
+<script>
+    document.getElementById("navbarDropdown").classList.add("active")
+  </script>
+{% endblock bodycontent %}

@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% block title %} Keywords
+{% endblock title %}
+{% block bodycontent %}
+    <h1 class="page-title">In-built Circuits Available</h1>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                    <div class="card" style="width: 21rem;">
+                        <img src="{{url_for('static',filename='Simple_gates/NOT_Gate.svg')}}" class="card-img-top" alt="Simple_gates_img">
+                      <div class="card-body">
+                        <h5 class="card-title">In Built Gates</h5>
+                        <p class="card-text">Check out the in-built gates to start using them while building the circuit.</p>
+                        <a href="/circuits/gates" class="btn btn-dark">Go <i class="bi bi-arrow-up-right"></i></a>
+                      </div>
+                    </div>
+                </div>
+            <div class="col">
+                <div class="card" style="width: 21rem;">
+                    <img src="{{url_for('static',filename='Combinational_ckts/Full_Adder.svg')}}" class="card-img-top" alt="Full_adder_img">
+                  <div class="card-body">
+                    <h5 class="card-title">In-Built Combinational Circuits</h5>
+                    <p class="card-text">Check out the in-built Combinational circuits which can be easily integrated easily.</p>
+                    <a href="/circuits/combinational" class="btn btn-danger">Check out <i class="bi bi-arrow-up-right"></i></a>
+                  </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card" style="width: 21rem;">
+                    <img src="{{url_for('static',filename='Seq_ckts/SR_Latch.svg')}}" class="card-img-top" alt="SR_Latch_img">
+                  <div class="card-body">
+                    <h5 class="card-title">In Built Sequential Blocks</h5>
+                    <p class="card-text">Check out the in-built Sequential Circuit blocks to simulate interesting sequential logic circuits.</p>
+                    <a href="/circuits/sequential" class="btn btn-primary">Learn More <i class="bi bi-arrow-up-right"></i></a>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+      document.getElementById("navbarDropdown").classList.add("active")
+    </script>
+{% endblock bodycontent %}

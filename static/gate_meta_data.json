@@ -1,0 +1,198 @@
+[
+    {
+        "name": "2x1 MUX",
+        "desc": "",
+        "truth_table": "",
+        "code": "",
+        "syntax": ""
+    },
+    {
+        "name": "4x1 MUX",
+        "desc": "",
+        "truth_table": "",
+        "code": "",
+        "syntax": ""
+    },
+    {
+        "name": "4 BIT RC Adder",
+        "desc": "",
+        "truth_table": "",
+        "code": "",
+        "syntax": ""
+    },
+    {
+        "name": "Full Adder",
+        "desc": "",
+        "truth_table": "",
+        "code": "",
+        "syntax": ""
+    },
+    {
+        "name": "Half Adder",
+        "desc": "",
+        "truth_table": "",
+        "code": "",
+        "syntax": ""
+    },
+    {
+        "name": "4 Bit Johnshon Counter",
+        "desc": "",
+        "truth_table": "",
+        "code": "",
+        "syntax": ""
+    },
+    {
+        "name": "4 Bit Ring Counter",
+        "desc": "",
+        "truth_table": "",
+        "code": "",
+        "syntax": ""
+    },
+    {
+        "name": "4 Bit Ripple Counter",
+        "desc": "",
+        "truth_table": "",
+        "code": "",
+        "syntax": ""
+    },
+    {
+        "name": "BCD Ripple Counter",
+        "desc": "",
+        "truth_table": "",
+        "code": "",
+        "syntax": ""
+    },
+    {
+        "name": "D Flip-Flop Negative edge triggered",
+        "desc": "",
+        "truth_table": "",
+        "code": "",
+        "syntax": ""
+    },
+    {
+        "name": "D Flip-Flop Positive edge triggered",
+        "desc": "",
+        "truth_table": "",
+        "code": "",
+        "syntax": ""
+    },
+    {
+        "name": "D Latch Enable",
+        "desc": "",
+        "truth_table": "",
+        "code": "",
+        "syntax": ""
+    },
+    {
+        "name": "JK Flip-Flop Negative edge triggered",
+        "desc": "",
+        "truth_table": "",
+        "code": "",
+        "syntax": ""
+    },
+    {
+        "name": "JK Flip-Flop Negative edge triggered with Set and Reset",
+        "desc": "",
+        "truth_table": "",
+        "code": "",
+        "syntax": ""
+    },
+    {
+        "name": "JK Flip-Flop Positive edge triggered",
+        "desc": "",
+        "truth_table": "",
+        "code": "",
+        "syntax": ""
+    },
+    {
+        "name": "JK Flip-Flop Positive edge triggered with Set and Reset",
+        "desc": "",
+        "truth_table": "",
+        "code": "",
+        "syntax": ""
+    },
+    {
+        "name": "JK Latch Enable",
+        "desc": "",
+        "truth_table": "",
+        "code": "",
+        "syntax": ""
+    },
+    {
+        "name": "S'R' Latch",
+        "desc": "",
+        "truth_table": "",
+        "code": "",
+        "syntax": ""
+    },
+    {
+        "name": "SR Latch",
+        "desc": "",
+        "truth_table": "",
+        "code": "",
+        "syntax": ""
+    },
+    {
+        "name": "SR Latch Enable",
+        "desc": "",
+        "truth_table": "",
+        "code": "",
+        "syntax": ""
+    },
+    {
+        "name": "T Flip-Flop Negative edge triggered",
+        "desc": "",
+        "truth_table": "",
+        "code": "",
+        "syntax": ""
+    },
+    {
+        "name": "T Flip-Flop Positive edge triggered",
+        "desc": "",
+        "truth_table": "",
+        "code": "",
+        "syntax": ""
+    },
+    {
+        "name": "AND Gate",
+        "desc": "The output of this gate is the logical AND operation of all input signals. In the first example given, A and B are the input signal pins and C is the output pin. By default, the last pin specified in the code is taken as the output pin of the Gate. Therefore, multiple inputs (2 or above) can be given to the AND gate.",
+        "truth_table": "",
+        "code" :"AND A B C #Two Inputs (A,B) and Output C\n\nAND A B C d #Three Inputs (A,B,C) and Output d", 
+        "syntax" : "AND [input signals seperated by space] [output signal]"
+    },
+    {
+        "name": "NAND Gate",
+        "desc": "The output of this gate is the logical NAND operation of all input signals. In the first example given, A and B are the input signal pins and C is the output pin. By default, the last pin specified in the code is taken as the output pin of the Gate. Therefore, multiple inputs (2 or above) can be given to the NAND gate.",
+        "truth_table": "",
+        "code": "NAND A B C #Two Inputs (A,B) and Output C\n\nNAND A B C d #Three Inputs (A,B,C) and Output d",
+        "syntax": "NAND [input signals seperated by space] [output signal]"
+    },
+    {
+        "name": "NOR Gate",
+        "desc": "The output of this gate is the logical NOR operation of all input signals. In the first example given, A and B are the input signal pins and C is the output pin. By default, the last pin specified in the code is taken as the output pin of the Gate. Therefore, multiple inputs (2 or above) can be given to the NOR gate.",
+        "truth_table": "",
+        "code": "NOR A B C #Two Inputs (A,B) and Output C\n\nNOR A B C d #Three Inputs (A,B,C) and Output d",
+        "syntax": "NOR [input signals seperated by space] [output signal]"
+    },
+    {
+        "name": "NOT Gate",
+        "desc": "NOT gate can be used to invert the digital logic of a given input signal (Logic high becomes Logic Low and vice-versa). Therefore, NOT Gate only has one input (A pin in example) and one output pin (B pin in example).",
+        "truth_table": "",
+        "code": "NOT A B",
+        "syntax": "NOT [input signal] [output signal]"
+    },
+    {
+        "name": "OR Gate",
+        "desc": "The output of this gate is the logical OR operation of all input signals. In the first example given, A and B are the input signal pins and C is the output pin. By default, the last pin specified in the code is taken as the output pin of the Gate. Therefore, multiple inputs (2 or above) can be given to the OR gate.",
+        "truth_table": "",
+        "code": "OR A B C #Two Inputs (A,B) and Output C\n\nOR A B C d #Three Inputs (A,B,C) and Output d",
+        "syntax": "OR [input signals seperated by space] [output signal]"
+    },
+    {
+        "name": "XOR Gate",
+        "desc": "The output of this gate is the logical XOR operation of all input signals. In the first example given, A and B are the input signal pins and C is the output pin. By default, the last pin specified in the code is taken as the output pin of the Gate. Therefore, multiple inputs (2 or above) can be given to the XOR gate.",
+        "truth_table": "",
+        "code": "XOR A B C #Two Inputs (A,B) and Output C\n\nXOR A B C d #Three Inputs (A,B,C) and Output d",
+        "syntax": "XOR [input signals seperated by space] [output signal]"
+    }
+]

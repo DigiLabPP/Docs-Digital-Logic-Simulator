@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% block title %} Home {% endblock title %}
+{% block bodycontent %}
+<h1 class="page-title">Welcome to DigiLab++ Docs!</h1>
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <div class="card" style="width: 18rem;">
+                <img src="{{url_for('static',filename='Simple_gates/NOT_Gate.svg')}}" class="card-img-top" alt="Keywords_img">
+                <div class="card-body">
+                  <h5 class="card-title">Language Keywords</h5>
+                  <p class="card-text">Explore the Language in-built keywords to get started with basic simulation.</p>
+                  <a href="/keywords" class="btn btn-success">Explore <i class="bi bi-arrow-up-right"></i> </a>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <img src="{{url_for('static',filename='Simple_gates/AND_Gate.svg')}}" class="card-img-top" alt="Simple_gates_img">
+                  <div class="card-body">
+                    <h5 class="card-title">Logic Gates</h5>
+                    <p class="card-text">Check out the in-built gates to start using them while building the circuit.</p>
+                    <a href="/circuits/gates" class="btn btn-dark">Go <i class="bi bi-arrow-up-right"></i></a>
+                  </div>
+                </div>
+            </div>
+        <div class="col">
+            <div class="card" style="width: 18rem;">
+                <img src="{{url_for('static',filename='Combinational_ckts/Full_Adder.svg')}}" class="card-img-top" alt="Full_adder_img">
+              <div class="card-body">
+                <h5 class="card-title">Combinational Circuits</h5>
+                <p class="card-text">Check out the in-built Combinational circuits which can be easily integrated.</p>
+                <a href="/circuits/combinational" class="btn btn-danger">Check out <i class="bi bi-arrow-up-right"></i></a>
+              </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card" style="width: 18rem;">
+                <img src="{{url_for('static',filename='Seq_ckts/SR_Latch.svg')}}" class="card-img-top" alt="SR_Latch_img">
+              <div class="card-body">
+                <h5 class="card-title">Sequential Circuits</h5>
+                <p class="card-text">Check out the in-built Sequential Circuits which can be integrated easily.</p>
+                <a href="/circuits/sequential" class="btn btn-primary">Learn More <i class="bi bi-arrow-up-right"></i></a>
+              </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock bodycontent %}
