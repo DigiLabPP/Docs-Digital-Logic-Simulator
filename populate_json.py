@@ -16,22 +16,27 @@ for i in static_dir:
 
 ''' 
     NOTE for Future work
-    output comes like: [
+-------------------------------------------
+    - output comes like: [
         str(dict),....
     ]
     expected is [
         dict,....
     ]
 
-    Cause of this issue: "\\" is getting converted to "\\\\"
+-------------------------------------------
+
+    - "\\" is getting converted to "\\\\"
+
+-------------------------------------------
     also dict is as string (which means 
     "{ => { 
         and 
     "} => }
     )
-
+-------------------------------------------
     make sure to convert the SdRd to S'R' (only in name)
-
+-------------------------------------------
 '''
 
 with open("gate_data.json","w") as f:
