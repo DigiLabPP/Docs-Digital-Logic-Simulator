@@ -1,6 +1,16 @@
 {% extends 'base.html' %}
 {% block title %}
-    
+    {% if content.delay %}
+      Delay - 
+    {% elif content.control %}
+      Control -
+    {% elif content.output %}
+      Output -
+    {% elif content.simtime %}
+      Simtime, Scale and END - 
+    {% endif %}
+
+    Keywords
 {% endblock title %}
 {% block customstyle %}
 <style>
@@ -30,6 +40,11 @@
 .code-block{
     margin-top:0.5rem;
 }
+@media screen and (max-width:450px) {
+  .container{
+          margin: 1rem;
+        }
+    }
 </style>
 {% endblock customstyle %}
 {% block bodycontent %}
@@ -46,12 +61,14 @@
             1 nanoseconds.</b>
         </p>
         <p>
-          Therefore, 
-          <br>
-          AND 1.5n <i class="bi text-danger bi-x-circle"></i> is not usable. <br>
+          Therefore,
+          <b>
+            AND 1.5n <i class="bi text-danger bi-x-circle"></i> is not usable. <br><br>
+          </b>
           Correct usage would be 
-          <br>
-          'AND 1n' or 'AND 2n' <i class="bi text-success bi-check2"></i> Either of them can be used.
+          <br> <b>
+            'AND 1n' or 'AND 2n' <i class="bi text-success bi-check2"></i> Either of them can be used.
+          </b>
         </p>
       </div>
     </div>
@@ -61,12 +78,12 @@
           <div class="code-block">
             <code>
 <pre>DELAY
-AND 2n    ([Gate_name] in general)</pre>
+AND 2n    ([Gate_type_name] in general)</pre>
             </code>
           </div>
         </div>
         <div class="col">
-          <p>The [Gate_name] (or AND in this case) is to access all the AND Gates present in the Circuit and initialize with 2 nanoseconds of propogation Delay.</p>
+          <p>The <b>[Gate_type_name]</b> (or AND in this case) is to access all the AND Gates present in the Circuit and initialize with 2 nanoseconds of propogation Delay.</p>
         </div>
       </div>
     <div class="row">
@@ -81,7 +98,7 @@ C 2n    ([Ouput_Port] in general)</pre>
         </div>
       </div>
       <div class="col">
-        <p>The [Output_Port] (or the AND gate with the output port named 'C' in this case) sets only the provided gate's propogation delay which is specified by its Output Port.
+        <p>The <b>[Output_Port]</b> (or the AND gate with the output port named 'C' in this case) sets only the provided gate's propogation delay which is specified by its Output Port.
           Here the And Gate whose output port is C is accessed and assigned with a Propogation Delay of 2 nanoseconds.
         </p>
       </div>
@@ -94,30 +111,52 @@ C 2n    ([Ouput_Port] in general)</pre>
 AND C B E F # 3 input AND gate
 # Rest of the code..
 DELAY
-AND2 2n
-AND3 4n</pre>
+AND 2 2n
+AND 3 4n</pre>
           </code>
         </div>
       </div>
       <div class="col">
-        <p>Here the AND2 implies the two input AND gates are intialized with the specified propogation delay.
-          Similarly the AND3 implies the AND gates with 3 inputs are initialized with the specified propogation delay.
+        <p>Here the <b>AND 2</b> implies the two input AND gates are intialized with the specified propogation delay.
+          Similarly the <b>AND 3</b> implies the AND gates with 3 inputs are initialized with the specified propogation delay.
         </p>
       </div>
     </div>
     <div class="row">
       <div class="col">
-        <h5>Precedence of input DELAY specifications: </h5>
+          <h5>Precedence of input DELAY specifications: </h5>
       </div>
       <div class="col">
-        <p></p>
+        <p><b>[Gate_Output] > AND n > AND</b></p>
+        <br>Here <b>[Gate_Output]</b> is the output port name of the Gate. <br> <b>AND n</b> means the <b>AND</b> with number of inputs 'n' <br>
+         AND is the generic one used to mention all AND Gates.
+        </p>
       </div>
     </div>
   </div>
 {% elif content.control %}
 <div class="container page-content">
   <div class="row">
-    <div class="col"></div>
+    <div class="col">
+      <h4 class="sub-title">Input Control Specifications Keywords</h4>
+      <p></p>
+    </div>
+  </div>
+</div>
+{% elif content.output %}
+<div class="container page-content">
+  <div class="row">
+    <div class="col">
+      <h4 class="sub-title">Output Specification Keywords</h4>
+    </div>
+  </div>
+</div>
+{% elif content.simtime %}
+<div class="container page-content">
+  <div class="row">
+    <div class="col">
+      <h4 class="sub-title">Simulation Time, Scale and END</h4>
+    </div>
   </div>
 </div>
 {% endif %}

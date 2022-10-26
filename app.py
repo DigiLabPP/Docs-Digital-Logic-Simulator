@@ -21,12 +21,18 @@ def keywords():
 
 @app.route('/keywords/<kw>/')
 def delay_k(kw):
-    status = {"delay":False,"control":False}
+    status = {"delay":False,"control":False,"output":False,"simtime":False}
     if kw=="delay":
         status["delay"] = True
         return render_template("keyw_template.html",content=status)
     elif kw=="control":
         status["control"] = True
+        return render_template("keyw_template.html",content=status)
+    elif kw=="output":
+        status["output"] = True
+        return render_template("keyw_template.html",content=status)
+    elif kw=="simtime":
+        status["simtime"] = True
         return render_template("keyw_template.html",content=status)
     else:
         return redirect("/keywords/")
