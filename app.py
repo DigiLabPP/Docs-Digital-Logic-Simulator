@@ -37,9 +37,11 @@ def delay_k(kw):
     else:
         return redirect("/keywords/")
 
+
 @app.route('/circuits/')
 def circuits():
     return render_template("circuits.html")
+
 
 @app.route('/circuits/gates/')
 def cir_gates():

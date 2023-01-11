@@ -78,7 +78,7 @@
           <div class="code-block">
             <code>
 <pre>DELAY
-AND 2n    ([Gate_type_name] in general)</pre>
+AND 2n           # ([Gate_type_name] in general)</pre>
             </code>
           </div>
         </div>
@@ -93,7 +93,7 @@ AND 2n    ([Gate_type_name] in general)</pre>
 <pre>AND A B C
 # Rest of the code..
 DELAY
-C 2n    ([Ouput_Port] in general)</pre>
+C 2n             # ([Ouput_Port] in general)</pre>
           </code>
         </div>
       </div>
@@ -107,8 +107,9 @@ C 2n    ([Ouput_Port] in general)</pre>
       <div class="col">
         <div class="code-block">
           <code>
-<pre>AND A B C # 2 input AND gate
-AND C B E F # 3 input AND gate
+<pre>
+AND A B C        # 2 input AND gate
+AND C B E F      # 3 input AND gate
 # Rest of the code..
 DELAY
 AND 2 2n
@@ -128,7 +129,7 @@ AND 3 4n</pre>
       </div>
       <div class="col">
         <p><b>[Gate_Output] > AND n > AND</b></p>
-        <br>Here <b>[Gate_Output]</b> is the output port name of the Gate. <br> <b>AND n</b> means the <b>AND</b> with number of inputs 'n' <br>
+        <br>Here <b>[Gate_Output]</b> is the output port name of the Gate. <b>AND n</b> means the AND Gate with <b>'n' number of inputs.</b>
          AND is the generic one used to mention all AND Gates.
         </p>
       </div>
@@ -160,7 +161,6 @@ AND 3 4n</pre>
   </div>
 </div>
 {% endif %}
-
 <script>
   document.getElementById("keyword").classList.add("active")
 </script>
