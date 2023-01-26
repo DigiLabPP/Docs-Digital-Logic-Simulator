@@ -31,14 +31,16 @@
 {% block bodycontent %}
 <h3 class="page-title">
     <dl>
-        <dt><a href="{{gate_info.loc}}">{{gate_info.curr}}</a></dt>
+        <!-- <dt><a href="{{gate_info.loc}}">{{gate_info.curr}}</a></dt> -->
+        <dt><a href="{{url_for(gate_info.loc)}}">{{gate_info.curr}}</a></dt>
         <dd> - {{gate_info.name}}</dd>
     </dl>
 </h3>
 <div class="container">
     <div class="row">
         <div class="col">
-            <img src="..\..\..\{{gate_info.url}}" alt="{{gate_info.name}}" width=70%>
+            <!-- <img src="..\..\..\{{gate_info.url}}" alt="{{gate_info.name}}" width=70%> -->
+            <img src="{{url_for('static',filename=gate_info.imgloc)}}" alt="{{gate_info.name}}" width=70%>
         </div>
         <div class="col specs">
             <h4 class="page-subtext">Syntax</h4>

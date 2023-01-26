@@ -7,6 +7,8 @@ def get_dict_data():
     f = open("gate_data.json","r")
     data = json.load(f)
     f.close()
+    for i in data:
+        i["imgloc"] = f"{i['loc']}/{i['name_w']}.svg"
     return data
 
 @app.route('/')
@@ -56,8 +58,9 @@ def gate_view(gate_name):
     for i in gate_data:
         if i["name_w"] == gate_name:
             gate = i
-            gate["loc"] = "/circuits/gates"
+            gate["loc"] = "cir_gates"
             gate["curr"] = "Simple Gates"
+            gate["imgloc"] = f"Simple_gates/{i['name_w']}.svg"
             break
     f = open("./static/gate_meta_data.json","r")
     meta_data = json.load(f)
@@ -83,8 +86,9 @@ def combin_view(gate_name):
     for i in gate_data:
         if i["name_w"] == gate_name:
             gate = i
-            gate["loc"] = "/circuits/combinational"
+            gate["loc"] = "cir_combi"
             gate["curr"] = "Combinational Circuits"
+            gate["imgloc"] = f"Combinational_ckts/{i['name_w']}.svg"
             break
     f = open("./static/gate_meta_data.json","r")
     meta_data = json.load(f)
@@ -112,8 +116,9 @@ def seq_ckt_view(gate_name):
     for i in gate_data:
         if i["name_w"] == gate_name:
             gate = i
-            gate["loc"] = "/circuits/sequential"
+            gate["loc"] = "cir_seq"
             gate["curr"] = "Sequential Circuits"
+            gate["imgloc"] = f"Seq_ckts/{i['name_w']}.svg"
             break
     f = open("./static/gate_meta_data.json","r")
     meta_data = json.load(f)

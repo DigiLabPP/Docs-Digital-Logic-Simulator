@@ -4,7 +4,7 @@
 {% block bodycontent %}
 <h3 class="page-title">
     <dl>
-        <dt><a href="/circuits">In-built Circuit</a></dt>
+        <dt><a href="{{url_for('circuits')}}">In-built Circuit</a></dt>
         <dd> - Simple Gates</dd>
     </dl>
 </h3>
@@ -14,8 +14,10 @@
             {% for gate in gate_data %}
             {% if 'Simple_gates' == gate.loc %}
             <tr>
-                <td class="gate_name align-middle"><a href="/circuits/gates/{{gate.name_w}}" class="link-dark">{{gate.name}}</a></td>
-                <td><a href="/circuits/gates/{{gate.name_w}}"><img src="..\..\{{gate.url}}" alt="{{gate.name}}"></a></td>
+                <!-- <td class="gate_name align-middle"><a href="/circuits/gates/{{gate.name_w}}" class="link-dark">{{gate.name}}</a></td>
+                <td><a href="/circuits/gates/{{gate.name_w}}"><img src="..\..\{{gate.url}}" alt="{{gate.name}}"></a></td> -->
+                <td class="gate_name align-middle"><a href="{{url_for('gate_view',gate_name=gate.name_w)}}" class="link-dark">{{gate.name}}</a></td>
+                <td><a href="{{url_for('gate_view',gate_name=gate.name_w)}}" class="link-dark"><img src="{{url_for('static',filename=gate.imgloc)}}" alt="{{gate.name}}" srcset=""></a></td>
             </tr>
             {% endif %}
             {% endfor %}
