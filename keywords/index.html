@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Keywords
+ - DigiLab++ Docs</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Abyssinica+SIL&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="/static/favicon.ico" type="image/x-icon">  
+    <style>
+        body{
+            text-align:center;
+        }
+        .navbar{
+          font-family: 'Montserrat', sans-serif;
+        }
+       .nav-item{
+            margin:0 2rem;
+        }
+    .page-title{
+      margin-top: 2rem;
+      font-family: 'Montserrat', sans-serif;
+    }
+      .container{
+        margin-top:3rem;
+      }
+    .row{
+        margin:2rem 0;
+    }
+    .card{
+        filter: drop-shadow(5px 5px 5px rgba(0,0,0,0.5));
+    }
+    .card-title{
+      font-family: 'Abyssinica SIL', serif;
+      font-weight: 600;
+    }
+    .card-body{
+      font-family: 'Montserrat', sans-serif;
+    }
+    .gate_name{
+        font-size:1.5rem;
+    }
+    .table-responsive{
+        margin-top:2rem;
+        padding:0 10%;
+        font-family: 'Abyssinica SIL', serif;
+        font-weight: 700;
+    }
+    a.link-dark:hover{
+        color:#0d6efd;
+    }
+    @media screen and (max-width:450px) {
+        .table-responsive{
+            padding:0;
+        }
+    }
+        </style>
+        
+  <style>
+    .page-content{
+      text-align: left;
+      margin:1rem 6rem;
+      font-size:1.2rem;
+    }
+    .sub-title{
+      font-family: 'Abyssinica SIL', serif;
+      font-weight:600;
+      margin-left:-2rem;
+    }
+        .row{
+          margin:1.4rem 0;
+        }
+        @media screen and (max-width:450px) {
+  .container{
+          margin: 1rem;
+        }
+    }
+  </style>
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark text-light">
+        <div class="container-fluid">
+        <a class="navbar-brand" href="/">DigiLab++ Docs</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="/keywords" id="keyword">Keywords</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Available Circuits
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="/circuits/gates">Simple Logic Gate</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="/circuits/combinational">Combinational Circuits</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="/circuits/sequential">Sequential Circuits</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/aboutus" id="about">About Us</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      
+    <h1 class="page-title">Keywords</h1>
+    <div class="container page-content">
+      <div class="row">
+        <h4 class="sub-title">Circuit Building Keywords</h4>
+        <div class="col">
+          <p>
+            <a href="/circuits">Check out the Available Circuits section for circuit building keywords!</a>
+          </p>
+        </div>
+      </div>
+      <div class="row">
+        <h4 class="sub-title">Gate Delay Specifications Keywords</h4>
+        <div class="col">
+          <p>
+            <a href="/keywords/delay/">Learn how to specify propogation delay to your logical circuit elements here!</a>
+          </p>
+        </div>
+      </div>
+      <div class="row">
+        <h4 class="sub-title">Input Control Specification Keywords</h4>
+        <div class="col">
+          <p>
+            <a href="/keywords/control/">Learn how to control the Input signals for circuit simulation here!</a>
+          </p>
+        </div>
+      </div>
+      <div class="row">
+        <h4 class="sub-title">Output Specification Keywords</h4>
+        <div class="col">
+          <p>
+            <a href="/keywords/output/">Get to know how to produce simulation Timing waveform results as Image here!</a>
+          </p>
+        </div>
+      </div>
+      <div class="row">
+        <h4 class="sub-title">Simulation Time, Scale and END</h4>
+        <div class="col">
+          <p>
+            <a href="/keywords/simtime/">Learn how to specify the Simulation time, scale for the time axis in output waveform generation and how to specify end of code.</a>
+          </p>
+        </div>
+      </div>
+    </div>
+    <script>
+        document.getElementById("keyword").classList.add("active")
+      </script>
+
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+</html>
