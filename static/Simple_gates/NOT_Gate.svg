@@ -1,7 +1,0 @@
-<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect width="200" height="200" fill="white"/>
-<line y1="99" x2="50" y2="99" stroke="black" stroke-width="2"/>
-<line x1="150" y1="99" x2="200" y2="99" stroke="black" stroke-width="2"/>
-<path d="M50.75 51.2759L139.824 99L50.75 146.724V51.2759Z" fill="white" stroke="black" stroke-width="3"/>
-<circle cx="145" cy="99" r="4.5" fill="white" stroke="black" stroke-width="3"/>
-</svg>
