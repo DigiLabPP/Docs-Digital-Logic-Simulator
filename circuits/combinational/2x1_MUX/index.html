@@ -139,17 +139,23 @@
             <h4 class="page-subtext">Syntax</h4>
             <div class="code-block">
                 <code>
-<pre></pre>
+<pre>2x1_MUX {[Subcircuit-label-n] [label-n]}
+
+Where, the Subcircuit labels are D1, D0, S and Y
+All Subcircuit labels are mandatory
+Order is arbitrary</pre>
                 </code>
             </div>
             <h4 class="page-subtext">Example</h4>
             <div class="code-block">
                 <code>                    
-<pre></pre>
+<pre>2x1_MUX D1 A D0 B S C Y D 
+
+#(D1 and D0 - Data inputs), S-Select input, Y-Output,
+#Order of the Subciruit labels doesn&#39;t matter</pre>
                 </code>
             </div>
-
-                <p class="gate-desc"></p>
+<p class="gate-desc">This block selects one from the two Data inputs based on the logic level at the Select line or Select input and passes to the output, while the other Data input which isn&#39;t selected, doesn&#39;t influence the output.</p>
         </div>
     </div>
 </div>
