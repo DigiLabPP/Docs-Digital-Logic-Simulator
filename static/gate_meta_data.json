@@ -24,43 +24,43 @@
         "name": "Full Adder",
         "desc": "Performs binary addition of an Augend bit with an Addend bit with an Input Carry and outputs Sum bit and Output carry.",
         "truth_table": "",
-        "code": "",
-        "syntax": ""
+        "code": "FULL_ADDER A a B b S s C_IN c_in C_OUT c_out #A: Augend bit, B: Addend bit, S: Sum Bit, C_IN: Input carry, C_OUT: Output carry",
+        "syntax": "FULL_ADDER {[Subcircuit-label-n] [label-n]}\nWhere, the Subcircuit labels are A, B, S, C_IN and C_OUT\nAll Subcircuit labels are mandatory\nOrder is arbitrary"
     },
     {
         "name": "Half Adder",
-        "desc": "",
+        "desc": "Performs binary addition of an Augend bit with an Added bit and generates Sum bit and Carry.",
         "truth_table": "",
-        "code": "",
-        "syntax": ""
+        "code": "HALF_ADDER A a B b S s C c #A: Augend bit, B: Addend bit, S: Sum Bit, C: Input carry",
+        "syntax": "FULL_ADDER {[Subcircuit-label-n] [label-n]}\nWhere, the Subcircuit labels are A, B, S, and C\nAll Subcircuit labels are mandatory\nOrder is arbitrary"
     },
     {
         "name": "4 Bit Johnshon Counter",
-        "desc": "",
+        "desc": "Generates the sequence of a 4-Bit Johnson Counter timed by the clock input.",
         "truth_table": "",
-        "code": "",
-        "syntax": ""
+        "code": "4BIT_JOHNSON_COUNTER CNT clk RST rst Q0 q0 Q1 q1 Q2 q2 Q3 q3 #CNT: Negative edge-triggered count input (clock), RST: Active-low asynchronous reset input, Q(0-3): Sequence output"
+        "syntax": "4BIT_JOHNSON_COUNTER {[Subcircuit-label-n] [label-n]}\nWhere, the Subcircuit labels are CNT, RST, Q(0-3)\nAll Subcircuit labels are mandatory\nOrder is arbitrary"
     },
     {
         "name": "4 Bit Ring Counter",
-        "desc": "",
+        "desc": "Generates the sequence of a 4-Bit Ring Counter timed by the clock input. Sequence is to be initated by activating the SET input for the MSB position (usually Ring count sequences consist of a single high bit, so the SET input is to be activated for a single clock edge).",
         "truth_table": "",
-        "code": "",
+        "code": "4BIT_RING_COUNTER CNT clk RST rst SET set Q0 q0 Q1 q1 Q2 q2 Q3 q3 #CNT: Negative edge-triggered count input (clock), RST: Active-low asynchronous reset input, SET: Active-low asynchronous set input for the MSB position (Q3), Q(0-3): Sequence output",
         "syntax": ""
     },
     {
         "name": "4 Bit Ripple Counter",
-        "desc": "",
+        "desc": "Performs 4-bit up-counting (from 0 to 15), timed by the count(clock) input.",
         "truth_table": "",
-        "code": "",
-        "syntax": ""
+        "code": "4BIT_RIPPLE_COUNTER CNT clk RST rst Q0 q0 Q1 q1 Q2 q2 Q3 q3 #CNT: Negative edge-triggered count input (clock), RST: Active-low asynchronous reset input, Q(0-3): Count output",
+        "syntax": "4BIT_RIPPLE_COUNTER {[Subcircuit-label-n] [label-n]}\nWhere, the Subcircuit labels are CNT, RST, Q(0-3)\nAll Subcircuit labels are mandatory\nOrder is arbitrary"
     },
     {
         "name": "BCD Ripple Counter",
-        "desc": "",
+        "desc": "Performs BCD (Binary Coded Decimal) counting (from 0 to 9), timed by the count(clock) input. Particularly used in displays, where more sections of the counter are cascaded to represent the tenth, hundredth positions and so on.",
         "truth_table": "",
         "code": "",
-        "syntax": ""
+        "syntax": "BCD_RIPPLE_COUNTER {[Subcircuit-label-n] [label-n]}\nWhere, the Subcircuit labels are CNT, RST, Q(0-3)\nAll Subcircuit labels are mandatory\nOrder is arbitrary"
     },
     {
         "name": "D Flip-Flop Negative edge triggered",
