@@ -139,13 +139,18 @@
             <h4 class="page-subtext">Syntax</h4>
             <div class="code-block">
                 <code>
-<pre></pre>
+<pre>FULL_ADDER {[Subcircuit-label-n] [label-n]}
+Where, the Subcircuit labels are A, B, S, C_IN and C_OUT
+All Subcircuit labels are mandatory
+Order is arbitrary</pre>
                 </code>
             </div>
             <h4 class="page-subtext">Example</h4>
             <div class="code-block">
                 <code>                    
-<pre></pre>
+<pre>FULL_ADDER A a B b S s C_IN c_in C_OUT c_out 
+# A: Augend bit, B: Addend bit, S: Sum Bit, 
+# C_IN: Input carry, C_OUT: Output carry</pre>
                 </code>
             </div>
 <p class="gate-desc">Performs binary addition of an Augend bit with an Addend bit with an Input Carry and outputs Sum bit and Output carry.</p>

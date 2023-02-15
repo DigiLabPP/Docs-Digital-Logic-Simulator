@@ -139,16 +139,22 @@
             <h4 class="page-subtext">Syntax</h4>
             <div class="code-block">
                 <code>
-<pre></pre>
+<pre>4BIT_RIPPLE_COUNTER {[Subcircuit-label-n] [label-n]}
+# Where, the Subcircuit labels are CNT, RST, Q(0-3)
+# All Subcircuit labels are mandatory
+$ Order is arbitrary</pre>
                 </code>
             </div>
             <h4 class="page-subtext">Example</h4>
             <div class="code-block">
                 <code>                    
-<pre></pre>
+<pre>4BIT_RIPPLE_COUNTER CNT clk RST rst Q0 q0 Q1 q1 Q2 q2 Q3 q3 
+# CNT: Negative edge-triggered count input (clock), 
+# RST: Active-low asynchronous reset input, 
+# Q(0-3): Count output</pre>
                 </code>
             </div>
-<p class="gate-desc"></p>
+<p class="gate-desc">Performs 4-bit up-counting (from 0 to 15), timed by the count(clock) input.</p>
         </div>
     </div>
 </div>

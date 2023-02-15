@@ -145,10 +145,14 @@
             <h4 class="page-subtext">Example</h4>
             <div class="code-block">
                 <code>                    
-<pre></pre>
+<pre>4BIT_RING_COUNTER CNT clk RST rst SET set Q0 q0 Q1 q1 Q2 q2 Q3 q3 
+# CNT: Negative edge-triggered count input (clock), 
+# RST: Active-low asynchronous reset input, 
+# SET: Active-low asynchronous set input for the MSB position (Q3), 
+# Q(0-3): Sequence output</pre>
                 </code>
             </div>
-<p class="gate-desc"></p>
+<p class="gate-desc">Generates the sequence of a 4-Bit Ring Counter timed by the clock input. Sequence is to be initated by activating the SET input for the MSB position (usually Ring count sequences consist of a single high bit, so the SET input is to be activated for a single clock edge).</p>
         </div>
     </div>
 </div>

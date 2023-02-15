@@ -140,18 +140,16 @@
             <div class="code-block">
                 <code>
 <pre>4x1_MUX {[Subcircuit-label-n] [label-n]}
-
-Where, the Subcircuit labels are D3, D2, D1, D0, S and Y
-All Subcircuit labels are mandatory
-Order is arbitrary</pre>
+# where, the Subcircuit labels are D3, D2, D1, D0, S and Y
+# All Subcircuit labels are mandatory
+# Order is arbitrary</pre>
                 </code>
             </div>
             <h4 class="page-subtext">Example</h4>
             <div class="code-block">
                 <code>                    
 <pre>4x1_MUX D3 A D2 B D1 C D0 D S1 E S0 F Y G 
-
-#Order of the Subciruit labels doesn&#39;t matter</pre>
+# Order of the Subciruit labels doesn&#39;t matter</pre>
                 </code>
             </div>
 <p class="gate-desc">This block selects one from the four Data inputs, binary encoded from zero to three, based on the logic levels at the Select lines/Select inputs and passes to the output, while the other Data inputs which aren&#39;t selected, don&#39;t influence the output for that selection.</p>

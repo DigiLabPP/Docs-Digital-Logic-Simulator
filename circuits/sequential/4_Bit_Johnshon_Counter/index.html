@@ -139,16 +139,22 @@
             <h4 class="page-subtext">Syntax</h4>
             <div class="code-block">
                 <code>
-<pre></pre>
+<pre>4BIT_JOHNSON_COUNTER {[Subcircuit-label-n] [label-n]}
+# Where, the Subcircuit labels are CNT, RST, Q(0-3)
+# All Subcircuit labels are mandatory
+# Order is arbitrary</pre>
                 </code>
             </div>
             <h4 class="page-subtext">Example</h4>
             <div class="code-block">
                 <code>                    
-<pre></pre>
+<pre>4BIT_JOHNSON_COUNTER CNT clk RST rst Q0 q0 Q1 q1 Q2 q2 Q3 q3 
+# CNT: Negative edge-triggered count input (clock), 
+# RST: Active-low asynchronous reset input, 
+# Q(0-3): Sequence output</pre>
                 </code>
             </div>
-<p class="gate-desc"></p>
+<p class="gate-desc">Generates the sequence of a 4-Bit Johnson Counter timed by the clock input.</p>
         </div>
     </div>
 </div>
