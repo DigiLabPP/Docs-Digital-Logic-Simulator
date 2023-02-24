@@ -3,64 +3,64 @@
         "name": "2x1 MUX",
         "desc": "This block selects one from the two Data inputs based on the logic level at the Select line/Select input and passes to the output, while the other Data input which isn't selected, doesn't influence the output.",
         "truth_table": "",
-        "code": "2x1_MUX D1 A D0 B S C Y D #(D1 and D0 - Data inputs), S-Select input, Y-Output, Order of the Subciruit labels doesn't matter",
-        "syntax": "2x1_MUX {[Subcircuit-label-n] [label-n]}\nwhere, the Subcircuit labels are D1, D0, S and Y\nAll Subcircuit labels are mandatory\nOrder is arbitrary"
+        "code": "2x1_MUX D1 A D0 B S C Y D \n# (D1 and D0 - Data inputs), S-Select input, \n# Y-Output, Order of the Subciruit labels doesn't matter",
+        "syntax": "2x1_MUX {[Subcircuit-label-n] [label-n]}\n# where, the Subcircuit labels are D1, D0, S and Y\n# All Subcircuit labels are mandatory\n# Order is arbitrary"
     },
     {
         "name": "4x1 MUX",
         "desc": "This block selects one from the four Data inputs, binary encoded from zero to three, based on the logic levels at the Select lines/Select inputs and passes to the output, while the other Data inputs which aren't selected, don't influence the output for that selection.",
         "truth_table": "",
-        "code": "4x1_MUX D3 A D2 B D1 C D0 D S1 E S0 F Y G #Order of the Subciruit labels doesn't matter",
-        "syntax": "4x1_MUX {[Subcircuit-label-n] [label-n]}\nwhere, the Subcircuit labels are D3, D2, D1, D0, S and Y\nAll Subcircuit labels are mandatory\nOrder is arbitrary"
+        "code": "4x1_MUX D3 A D2 B D1 C D0 D S1 E S0 F Y G \n# Order of the Subciruit labels doesn't matter",
+        "syntax": "4x1_MUX {[Subcircuit-label-n] [label-n]}\n# where, the Subcircuit labels are D3, D2, D1, D0, S and Y\n# All Subcircuit labels are mandatory\n# Order is arbitrary"
     },
     {
         "name": "4 BIT RC Adder",
         "desc": "4-Bit Ripple Carry Adder. Consists of 4 sections of Full Adders connected in a carry-ripple fashion. Receives Addend and Augend bits with Input carry.",
         "truth_table": "",
-        "code": "4BIT_RC_ADDER A3 a3 B3 b3 A2 a2 B2 b2 A1 a1 B1 b1 A0 a0 B0 b0 S3 s3 S2 s2 S1 s1 S0 s0 C_IN c1 C_OUT c2 #(A0-A3): Augend bits, (B0-B3): Addend bits, (S0-S3): Sum bits, C_IN: Input Carry, C_OUT: Output Carry",
-        "syntax": "4BIT_RC_ADDER {[Subcircuit-label-n] [label-n]}\nWhere, the Subcircuit labels are A3-A0, B3-B0, S3-S0, C_IN, C_OUT"
+        "code": "4BIT_RC_ADDER A3 a3 B3 b3 A2 a2 B2 b2 A1 a1 \nB1 b1 A0 a0 B0 b0 S3 s3 S2 s2 S1 s1 \nS0 s0 C_IN c1 C_OUT c2 \n# (A0-A3): Augend bits, (B0-B3): Addend bits, (S0-S3): Sum bits, \n# C_IN: Input Carry, C_OUT: Output Carry",
+        "syntax": "4BIT_RC_ADDER {[Subcircuit-label-n] [label-n]}\n# Where, the Subcircuit labels are \n# A3-A0, B3-B0, S3-S0, C_IN, C_OUT"
     },
     {
         "name": "Full Adder",
         "desc": "Performs binary addition of an Augend bit with an Addend bit with an Input Carry and outputs Sum bit and Output carry.",
         "truth_table": "",
-        "code": "FULL_ADDER A a B b S s C_IN c_in C_OUT c_out #A: Augend bit, B: Addend bit, S: Sum Bit, C_IN: Input carry, C_OUT: Output carry",
+        "code": "FULL_ADDER A a B b S s C_IN c_in C_OUT c_out \n# A: Augend bit, B: Addend bit, S: Sum Bit, \n# C_IN: Input carry, C_OUT: Output carry",
         "syntax": "FULL_ADDER {[Subcircuit-label-n] [label-n]}\nWhere, the Subcircuit labels are A, B, S, C_IN and C_OUT\nAll Subcircuit labels are mandatory\nOrder is arbitrary"
     },
     {
         "name": "Half Adder",
         "desc": "Performs binary addition of an Augend bit with an Added bit and generates Sum bit and Carry.",
         "truth_table": "",
-        "code": "HALF_ADDER A a B b S s C c #A: Augend bit, B: Addend bit, S: Sum Bit, C: Input carry",
+        "code": "HALF_ADDER A a B b S s C c \n# A: Augend bit, B: Addend bit, S: Sum Bit, C: Input carry",
         "syntax": "FULL_ADDER {[Subcircuit-label-n] [label-n]}\nWhere, the Subcircuit labels are A, B, S, and C\nAll Subcircuit labels are mandatory\nOrder is arbitrary"
     },
     {
         "name": "4 Bit Johnshon Counter",
         "desc": "Generates the sequence of a 4-Bit Johnson Counter timed by the clock input.",
         "truth_table": "",
-        "code": "4BIT_JOHNSON_COUNTER CNT clk RST rst Q0 q0 Q1 q1 Q2 q2 Q3 q3 #CNT: Negative edge-triggered count input (clock), RST: Active-low asynchronous reset input, Q(0-3): Sequence output"
-        "syntax": "4BIT_JOHNSON_COUNTER {[Subcircuit-label-n] [label-n]}\nWhere, the Subcircuit labels are CNT, RST, Q(0-3)\nAll Subcircuit labels are mandatory\nOrder is arbitrary"
+        "code": "4BIT_JOHNSON_COUNTER CNT clk RST rst Q0 q0 Q1 q1 Q2 q2 Q3 q3 \n# CNT: Negative edge-triggered count input (clock), \n# RST: Active-low asynchronous reset input, \n# Q(0-3): Sequence output",
+        "syntax": "4BIT_JOHNSON_COUNTER {[Subcircuit-label-n] [label-n]}\n# Where, the Subcircuit labels are CNT, RST, Q(0-3)\n# All Subcircuit labels are mandatory\n# Order is arbitrary"
     },
     {
         "name": "4 Bit Ring Counter",
         "desc": "Generates the sequence of a 4-Bit Ring Counter timed by the clock input. Sequence is to be initated by activating the SET input for the MSB position (usually Ring count sequences consist of a single high bit, so the SET input is to be activated for a single clock edge).",
         "truth_table": "",
-        "code": "4BIT_RING_COUNTER CNT clk RST rst SET set Q0 q0 Q1 q1 Q2 q2 Q3 q3 #CNT: Negative edge-triggered count input (clock), RST: Active-low asynchronous reset input, SET: Active-low asynchronous set input for the MSB position (Q3), Q(0-3): Sequence output",
-        "syntax": ""
+        "code": "4BIT_RING_COUNTER CNT clk RST rst SET set Q0 q0 Q1 q1 Q2 q2 Q3 q3 \n# CNT: Negative edge-triggered count input (clock), \n# RST: Active-low asynchronous reset input, \n# SET: Active-low asynchronous set input for the MSB position (Q3), \n# Q(0-3): Sequence output",
+        "syntax": "4BIT_RING_COUNTER {[Subcircuit-label-n] [label-n]}\n# Where, the Subcircuit labels are CNT, SET, RST, Q(0-3)\n# All Subcircuit labels are mandatory\n# Order is arbitrary"
     },
     {
         "name": "4 Bit Ripple Counter",
-        "desc": "Performs 4-bit up-counting (from 0 to 15), timed by the count(clock) input.",
+        "desc": "4-BIT-RIPPLE COUNTER: Generates the 4 bit up counting sequence 0000 to 1111 (0 to 15 decimal) timed by the clock.",
         "truth_table": "",
-        "code": "4BIT_RIPPLE_COUNTER CNT clk RST rst Q0 q0 Q1 q1 Q2 q2 Q3 q3 #CNT: Negative edge-triggered count input (clock), RST: Active-low asynchronous reset input, Q(0-3): Count output",
-        "syntax": "4BIT_RIPPLE_COUNTER {[Subcircuit-label-n] [label-n]}\nWhere, the Subcircuit labels are CNT, RST, Q(0-3)\nAll Subcircuit labels are mandatory\nOrder is arbitrary"
+        "code": "4BIT_RIPPLE_COUNTER CNT clk RST rst Q0 q0 Q1 q1 Q2 q2 Q3 q3 \n# CNT: Negative edge-triggered count input (clock), \n# RST: Active-low asynchronous reset input, \n# Q(0-3): Count output",
+        "syntax": "4BIT_RIPPLE_COUNTER {[Subcircuit-label-n] [label-n]}\n# Where, the Subcircuit labels are CNT, RST, Q(0-3)\n# All Subcircuit labels are mandatory\n$ Order is arbitrary"
     },
     {
         "name": "BCD Ripple Counter",
         "desc": "Performs BCD (Binary Coded Decimal) counting (from 0 to 9), timed by the count(clock) input. Particularly used in displays, where more sections of the counter are cascaded to represent the tenth, hundredth positions and so on.",
         "truth_table": "",
-        "code": "",
-        "syntax": "BCD_RIPPLE_COUNTER {[Subcircuit-label-n] [label-n]}\nWhere, the Subcircuit labels are CNT, RST, Q(0-3)\nAll Subcircuit labels are mandatory\nOrder is arbitrary"
+        "code": "BCD_RIPPLE_COUNTER T clk T t Q0 q0 Q1 q1 Q2 q2 Q3 q3 \n# T: Count enable, \n# RST: Active-low asynchronous reset input, \n# Q(0-3): Count output",
+        "syntax": "BCD_RIPPLE_COUNTER {[Subcircuit-label-n] [label-n]}\n# Where, the Subcircuit labels are T, RST, Q(0-3)\n# All Subcircuit labels are mandatory\n# Order is arbitrary"
     },
     {
         "name": "D Flip-Flop Negative edge triggered",
@@ -77,7 +77,7 @@
         "syntax": ""
     },
     {
-        "name": "D Latch Enable",
+        "name": "Gated D Latch",
         "desc": "",
         "truth_table": "",
         "code": "",
@@ -112,32 +112,32 @@
         "syntax": ""
     },
     {
-        "name": "JK Latch Enable",
+        "name": "Gated JK-Latch",
         "desc": "",
         "truth_table": "",
         "code": "",
         "syntax": ""
     },
     {
-        "name": "S'R' Latch",
-        "desc": "",
+        "name": "S'R'-Latch",
+        "desc": "Latches a single bit Q according to the input levels (active LOW).",
         "truth_table": "",
-        "code": "",
-        "syntax": ""
+        "code": "S'R'_LATCH S s R r Q q Q` q`\n# Another example\nS'R'_LATCH S s R r Q q",
+        "syntax": "S'R'_LATCH {[Subcircuit-label-n] [label-n]}\n# Where, the Subcircuit labels are S', R', Q, Q`\n# All Subcircuit labels are mandatory except the outputs\n# Order is arbitrary"
     },
     {
-        "name": "SR Latch",
-        "desc": "",
+        "name": "SR-Latch",
+        "desc": "Latches a single bit Q according to the input levels (active HIGH).",
         "truth_table": "",
-        "code": "",
-        "syntax": ""
+        "code": "SR_LATCH S s R r Q q Q` q`\n# Another example\nSR_LATCH S s R r Q q",
+        "syntax": "SR_LATCH {[Subcircuit-label-n] [label-n]}\n# Where, the Subcircuit labels are S, R, Q, Q`\n# All Subcircuit labels are mandatory except the outputs\n# Order is arbitrary"
     },
     {
-        "name": "SR Latch Enable",
-        "desc": "",
+        "name": "Gated SR-Latch",
+        "desc": "Latches a single bit Q according to the inputs S and R. EN is the gate input (Active LOW level triggered).",
         "truth_table": "",
-        "code": "",
-        "syntax": ""
+        "code": "SR_LATCH_EN S s R r EN En Q q Q` q`\n# Another example\nSR_LATCH S s R r EN En Q q",
+        "syntax": "SR_LATCH_EN {[Subcircuit-label-n] [label-n]}\n# Where, the Subcircuit labels are S, R, EN, Q, Q`\n# All Subcircuit labels are mandatory except the outputs\n# Order is arbitrary"
     },
     {
         "name": "T Flip-Flop Negative edge triggered",
