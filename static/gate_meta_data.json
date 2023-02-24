@@ -46,11 +46,11 @@
         "desc": "Generates the sequence of a 4-Bit Ring Counter timed by the clock input. Sequence is to be initated by activating the SET input for the MSB position (usually Ring count sequences consist of a single high bit, so the SET input is to be activated for a single clock edge).",
         "truth_table": "",
         "code": "4BIT_RING_COUNTER CNT clk RST rst SET set Q0 q0 Q1 q1 Q2 q2 Q3 q3 \n# CNT: Negative edge-triggered count input (clock), \n# RST: Active-low asynchronous reset input, \n# SET: Active-low asynchronous set input for the MSB position (Q3), \n# Q(0-3): Sequence output",
-        "syntax": ""
+        "syntax": "4BIT_RING_COUNTER {[Subcircuit-label-n] [label-n]}\n# Where, the Subcircuit labels are CNT, SET, RST, Q(0-3)\n# All Subcircuit labels are mandatory\n# Order is arbitrary"
     },
     {
         "name": "4 Bit Ripple Counter",
-        "desc": "Performs 4-bit up-counting (from 0 to 15), timed by the count(clock) input.",
+        "desc": "4-BIT-RIPPLE COUNTER: Generates the 4 bit up counting sequence 0000 to 1111 (0 to 15 decimal) timed by the clock.",
         "truth_table": "",
         "code": "4BIT_RIPPLE_COUNTER CNT clk RST rst Q0 q0 Q1 q1 Q2 q2 Q3 q3 \n# CNT: Negative edge-triggered count input (clock), \n# RST: Active-low asynchronous reset input, \n# Q(0-3): Count output",
         "syntax": "4BIT_RIPPLE_COUNTER {[Subcircuit-label-n] [label-n]}\n# Where, the Subcircuit labels are CNT, RST, Q(0-3)\n# All Subcircuit labels are mandatory\n$ Order is arbitrary"
@@ -59,8 +59,8 @@
         "name": "BCD Ripple Counter",
         "desc": "Performs BCD (Binary Coded Decimal) counting (from 0 to 9), timed by the count(clock) input. Particularly used in displays, where more sections of the counter are cascaded to represent the tenth, hundredth positions and so on.",
         "truth_table": "",
-        "code": "",
-        "syntax": "BCD_RIPPLE_COUNTER {[Subcircuit-label-n] [label-n]}\n# Where, the Subcircuit labels are CNT, RST, Q(0-3)\n# All Subcircuit labels are mandatory\n# Order is arbitrary"
+        "code": "BCD_RIPPLE_COUNTER T clk T t Q0 q0 Q1 q1 Q2 q2 Q3 q3 \n# T: Count enable, \n# RST: Active-low asynchronous reset input, \n# Q(0-3): Count output",
+        "syntax": "# Has two variants: \n BCD_RIPPLE_COUNTER {[Subcircuit-label-n] [label-n]}\n BCD_RIPPLE_COUNTER_ALT {[Subcircuit-label-n] [label-n]}\n# The second variant is a straightforward \n# implementation with a 4-Bit Ripple Counter with \n# a cascade extension and the first \n# variant is a more complex implementation\n# Where, the Subcircuit labels are T, RST, Q(0-3)\n# All Subcircuit labels are mandatory\n# Order is arbitrary"
     },
     {
         "name": "D Flip-Flop Negative edge triggered",
@@ -77,11 +77,11 @@
         "syntax": ""
     },
     {
-        "name": "D Latch Enable",
-        "desc": "",
+        "name": "Gated D Latch",
+        "desc": "Latches a single bit Q according to the inputs S and R. EN is the gate input (Active LOW level triggered).",
         "truth_table": "",
-        "code": "",
-        "syntax": ""
+        "code": "D_LATCH_EN D d EN En Q q Q` q`",
+        "syntax": "D_LATCH_EN {[Subcircuit-label-n] [label-n]}\n# Where, the Subcircuit labels are D, EN, Q, Q`\n# All Subcircuit labels are mandatory except the outputs\n# Order is arbitrary"
     },
     {
         "name": "JK Flip-Flop Negative edge triggered",
@@ -112,32 +112,32 @@
         "syntax": ""
     },
     {
-        "name": "JK Latch Enable",
+        "name": "Gated JK-Latch",
         "desc": "",
         "truth_table": "",
         "code": "",
         "syntax": ""
     },
     {
-        "name": "S'R' Latch",
-        "desc": "",
+        "name": "S'R'-Latch",
+        "desc": "Latches a single bit Q according to the input levels (active LOW).",
         "truth_table": "",
-        "code": "",
-        "syntax": ""
+        "code": "S'R'_LATCH S s R r Q q Q` q`\n# Another example\nS'R'_LATCH S s R r Q q",
+        "syntax": "S'R'_LATCH {[Subcircuit-label-n] [label-n]}\n# Where, the Subcircuit labels are S', R', Q, Q`\n# All Subcircuit labels are mandatory except the outputs\n# Order is arbitrary"
     },
     {
-        "name": "SR Latch",
-        "desc": "",
+        "name": "SR-Latch",
+        "desc": "Latches a single bit Q according to the input levels (active HIGH).",
         "truth_table": "",
-        "code": "",
-        "syntax": ""
+        "code": "SR_LATCH S s R r Q q Q` q`\n# Another example\nSR_LATCH S s R r Q q",
+        "syntax": "SR_LATCH {[Subcircuit-label-n] [label-n]}\n# Where, the Subcircuit labels are S, R, Q, Q`\n# All Subcircuit labels are mandatory except the outputs\n# Order is arbitrary"
     },
     {
-        "name": "SR Latch Enable",
-        "desc": "",
+        "name": "Gated SR-Latch",
+        "desc": "Latches a single bit Q according to the inputs S and R. EN is the gate input (Active LOW level triggered).",
         "truth_table": "",
-        "code": "",
-        "syntax": ""
+        "code": "SR_LATCH_EN S s R r EN En Q q Q` q`\n# Another example\nSR_LATCH S s R r EN En Q q",
+        "syntax": "SR_LATCH_EN {[Subcircuit-label-n] [label-n]}\n# Where, the Subcircuit labels are S, R, EN, Q, Q`\n# All Subcircuit labels are mandatory except the outputs\n# Order is arbitrary"
     },
     {
         "name": "T Flip-Flop Negative edge triggered",

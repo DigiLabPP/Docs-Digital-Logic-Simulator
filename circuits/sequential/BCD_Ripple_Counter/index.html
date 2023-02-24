@@ -139,8 +139,14 @@
             <h4 class="page-subtext">Syntax</h4>
             <div class="code-block">
                 <code>
-<pre>BCD_RIPPLE_COUNTER {[Subcircuit-label-n] [label-n]}
-# Where, the Subcircuit labels are CNT, RST, Q(0-3)
+<pre># Has two variants: 
+ BCD_RIPPLE_COUNTER {[Subcircuit-label-n] [label-n]}
+ BCD_RIPPLE_COUNTER_ALT {[Subcircuit-label-n] [label-n]}
+# The second variant is a straightforward 
+# implementation with a 4-Bit Ripple Counter with 
+# a cascade extension and the first 
+# variant is a more complex implementation
+# Where, the Subcircuit labels are T, RST, Q(0-3)
 # All Subcircuit labels are mandatory
 # Order is arbitrary</pre>
                 </code>
@@ -148,7 +154,10 @@
             <h4 class="page-subtext">Example</h4>
             <div class="code-block">
                 <code>                    
-<pre></pre>
+<pre>BCD_RIPPLE_COUNTER T clk T t Q0 q0 Q1 q1 Q2 q2 Q3 q3 
+# T: Count enable, 
+# RST: Active-low asynchronous reset input, 
+# Q(0-3): Count output</pre>
                 </code>
             </div>
 <p class="gate-desc">Performs BCD (Binary Coded Decimal) counting (from 0 to 9), timed by the count(clock) input. Particularly used in displays, where more sections of the counter are cascaded to represent the tenth, hundredth positions and so on.</p>
